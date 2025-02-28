@@ -13,3 +13,18 @@ Description: Just another mod for Agar...
 Author: @ytb.shark
 Name: SharkMod
 
+Package: com.shark.mod
+Version: 1.7.2
+Architecture: iphoneos-arm
+Maintainer: @ytb.shark
+Installed-Size: 216
+Filename: debs/com.shark.mod_1.7.2_iphoneos-arm.deb
+Size: 56688
+MD5sum: 954ea74b8f0791d8f2c47cd98b0a237d
+SHA1: 40f5b2241685481d17bc2ae9cdd568e2b59a8557
+SHA256: 8ee59502ea182778d29ca4cc5870956c6a38d93565537a323ebd20a2afebd152
+Section: Tweaks
+Description: Just another mod for Agar...
+Author: @ytb.shark
+Name: SharkMod
+
