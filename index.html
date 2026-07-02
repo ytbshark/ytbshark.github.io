@@ -4,69 +4,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shark's Repo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --btn-ipa: #6366f1;
+            --btn-ipa-hover: #4f46e5;
+            --btn-apk: #10b981;
+            --btn-apk-hover: #059669;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background: #1e1e2e;
-            color: white;
-            text-align: center;
-            padding: 50px;
-        }
-        .container {
-            max-width: 600px;
-            margin: auto;
-            background: #282a36;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
             padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
-        h1 {
-            font-size: 24px;
-        }
-        p {
-            font-size: 16px;
-            opacity: 0.8;
-        }
-        .button {
-            display: block;
-            width: 80%;
-            max-width: 250px;
-            padding: 15px;
-            font-size: 18px;
-            color: white;
+
+        .container {
+            max-width: 450px;
+            width: 100%;
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 40px 30px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
             text-align: center;
-            background: #ff8c00;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
+        }
+
+        /* Fun little avatar header to replace the empty space */
+        .avatar {
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 16px;
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
             text-decoration: none;
-            margin: 10px auto;
+            border-radius: 14px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
         }
-        .button:hover {
-            background: #ff6f00;
+
+        .btn svg {
+            width: 22px;
+            height: 22px;
+            fill: currentColor;
         }
-        .download-button {
-            background: #007bff;
+
+        .btn-ipa {
+            background: var(--btn-ipa);
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
         }
-        .download-button:hover {
-            background: #0056b3;
+
+        .btn-ipa:hover {
+            background: var(--btn-ipa-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
+        }
+
+        .btn-apk {
+            background: var(--btn-apk);
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-apk:hover {
+            background: var(--btn-apk-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.5);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Hey:)</h1>
-        <p>The latest IPA is always linked bellow!
-        If you're jailbroken you can directly add my repo to sileo to always stay up-to-date.</p>
+        <div class="avatar">🦈</div>
+        <h1>Hey :)</h1>
+        
+        <p>The latest iPA/APK is always linked bellow</p>
 
-        <a class="button" href="sileo://source/https://ytbshark.github.io/" target="_blank">
-            Add to Sileo
-        </a>
+        <div class="button-group">
+            <a href="https://github.com/ytbshark/ytbshark.github.io/releases/download/jailed-1.8.5/SharkMod_1.8.5.ipa" class="btn btn-ipa" download>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                    <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
+                </svg>
+                Download Latest IPA
+            </a>
 
-        <a class="button download-button" href="https://github.com/ytbshark/ytbshark.github.io/releases/download/jailed-1.8.5/SharkMod_1.8.5.ipa" download>
-            Download Latest IPA
-        </a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=PL8dZXjD8meS_WZzEKSReIBPLzKaW3HboH&index=1" class="btn btn-apk" download>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path d="M420.55,301.93a24,24,0,1,1,24-24,24,24,0,0,1-24,24m-265.1,0a24,24,0,1,1,24-24,24,24,0,0,1-24,24m273.7-144.48,47.94-83a10,10,0,1,0-17.27-10h0l-48.54,84.07a301.25,301.25,0,0,0-246.56,0L116.18,64.45a10,10,0,1,0-17.27,10h0l48,83.24C53.92,206.84,0,302,0,416.42H576c0-114.4-53.92-209.58-146.85-258.97"/>
+                </svg>
+                Download Latest APK
+            </a>
+        </div>
     </div>
 </body>
 </html>
-
